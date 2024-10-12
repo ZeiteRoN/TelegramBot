@@ -1,0 +1,14 @@
+C:\Users\stars\RiderProjects\tg_bot\tg_bot\bin\Debug\net8.0\tg_bot.exe
+C:\Users\stars\RiderProjects\tg_bot\tg_bot\bin\Debug\net8.0\tg_bot.deps.json
+C:\Users\stars\RiderProjects\tg_bot\tg_bot\bin\Debug\net8.0\tg_bot.runtimeconfig.json
+C:\Users\stars\RiderProjects\tg_bot\tg_bot\bin\Debug\net8.0\tg_bot.dll
+C:\Users\stars\RiderProjects\tg_bot\tg_bot\bin\Debug\net8.0\tg_bot.pdb
+C:\Users\stars\RiderProjects\tg_bot\tg_bot\obj\Debug\net8.0\tg_bot.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\stars\RiderProjects\tg_bot\tg_bot\obj\Debug\net8.0\tg_bot.AssemblyInfoInputs.cache
+C:\Users\stars\RiderProjects\tg_bot\tg_bot\obj\Debug\net8.0\tg_bot.AssemblyInfo.cs
+C:\Users\stars\RiderProjects\tg_bot\tg_bot\obj\Debug\net8.0\tg_bot.csproj.CoreCompileInputs.cache
+C:\Users\stars\RiderProjects\tg_bot\tg_bot\obj\Debug\net8.0\tg_bot.dll
+C:\Users\stars\RiderProjects\tg_bot\tg_bot\obj\Debug\net8.0\refint\tg_bot.dll
+C:\Users\stars\RiderProjects\tg_bot\tg_bot\obj\Debug\net8.0\tg_bot.pdb
+C:\Users\stars\RiderProjects\tg_bot\tg_bot\obj\Debug\net8.0\tg_bot.genruntimeconfig.cache
+C:\Users\stars\RiderProjects\tg_bot\tg_bot\obj\Debug\net8.0\ref\tg_bot.dll
