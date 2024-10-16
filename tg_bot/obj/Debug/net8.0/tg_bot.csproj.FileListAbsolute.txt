@@ -12,3 +12,8 @@ C:\Users\stars\RiderProjects\tg_bot\tg_bot\obj\Debug\net8.0\refint\tg_bot.dll
 C:\Users\stars\RiderProjects\tg_bot\tg_bot\obj\Debug\net8.0\tg_bot.pdb
 C:\Users\stars\RiderProjects\tg_bot\tg_bot\obj\Debug\net8.0\tg_bot.genruntimeconfig.cache
 C:\Users\stars\RiderProjects\tg_bot\tg_bot\obj\Debug\net8.0\ref\tg_bot.dll
+C:\Users\stars\RiderProjects\tg_bot\tg_bot\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\stars\RiderProjects\tg_bot\tg_bot\bin\Debug\net8.0\Telegram.Bot.dll
+C:\Users\stars\RiderProjects\tg_bot\tg_bot\obj\Debug\net8.0\tg_bot.csproj.AssemblyReference.cache
+C:\Users\stars\RiderProjects\tg_bot\tg_bot\obj\Debug\net8.0\tg_bot.sourcelink.json
+C:\Users\stars\RiderProjects\tg_bot\tg_bot\obj\Debug\net8.0\tg_bot.csproj.Up2Date
