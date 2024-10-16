@@ -8,7 +8,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        Host host = new Host("7601772680:AAHuzkjiLCuGSptAGliW8kTGDtxxPM87aUo");
+        Host host = new Host("token");
         host.StartReceiving();
         Console.ReadLine();
     }
