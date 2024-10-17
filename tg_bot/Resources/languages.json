@@ -1,0 +1,12 @@
+{
+  "english": 
+  {
+    "Greeting": "Hello, User!",
+    "LangSwitch": "Language was successfully changed!"
+  },
+  "ukrainian": 
+  {
+    "Greeting": "Привіт, Користувачу!",
+    "LangSwitch": "Мову було успішно змінено!"
+  }
+}
