@@ -7,11 +7,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ad23e2f3-2a93-4b4d-9a9e-d09c1b456cfc" name="Changes" comment="first funcions, lang packs">
-      <change afterPath="$PROJECT_DIR$/tg_bot/Resources/languages.json" afterDir="false" />
+    <list default="true" id="ad23e2f3-2a93-4b4d-9a9e-d09c1b456cfc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.tg_bot/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.tg_bot/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tg_bot/Host.cs" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/Host.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tg_bot/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tg_bot/Resources/languages.json" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/Resources/languages.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tg_bot/bin/Debug/net8.0/tg_bot.dll" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/bin/Debug/net8.0/tg_bot.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tg_bot/bin/Debug/net8.0/tg_bot.exe" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/bin/Debug/net8.0/tg_bot.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tg_bot/bin/Debug/net8.0/tg_bot.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/bin/Debug/net8.0/tg_bot.pdb" afterDir="false" />
@@ -40,6 +40,8 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/387238ef9c8f8c6b1dccf4dcba4eed0e459454919b2e4b9cad11a5071789df/Dictionary.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7ed6f5e3b5f78ae215ce2f37f9ca779fea6e31feb6dfdf8b5683b9b27ba54/JsonConvert.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/stars/RiderProjects/tg_bot/tg_bot/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/stars/RiderProjects/tg_bot/tg_bot/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/tg_bot/obj/Debug/net8.0/.NETCoreApp,Version=v8.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -96,7 +98,8 @@
       <workItem from="1728749122990" duration="6265000" />
       <workItem from="1729020575401" duration="724000" />
       <workItem from="1729086223794" duration="6528000" />
-      <workItem from="1729194117249" duration="4249000" />
+      <workItem from="1729194117249" duration="4664000" />
+      <workItem from="1729252447805" duration="3835000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <option name="closed" value="true" />
@@ -114,7 +117,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729093548903</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="json languages">
+      <option name="closed" value="true" />
+      <created>1729198660133</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1729198660133</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,6 +148,7 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="init commit" />
     <MESSAGE value="first funcions, lang packs" />
-    <option name="LAST_COMMIT_MESSAGE" value="first funcions, lang packs" />
+    <MESSAGE value="json languages" />
+    <option name="LAST_COMMIT_MESSAGE" value="json languages" />
   </component>
 </project>

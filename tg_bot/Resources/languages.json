@@ -1,12 +1,16 @@
 {
   "english": 
   {
-    "Greeting": "Hello, User!",
-    "LangSwitch": "Language was successfully changed!"
+    "Greeting": "Hello, User! This bot was created to take your orders and send them to restaurant!",
+    "langOptions": "Choose language to switch:",
+    "LangSwitch": "Language was successfully changed!",
+    "Contacts": "E-mail: zeiter1007@gmail.com\nManager telegram: @incred_huck\nHotline: 0546665544"
   },
   "ukrainian": 
   {
     "Greeting": "Привіт, Користувачу!",
-    "LangSwitch": "Мову було успішно змінено!"
+    "langOptions": "Оберіть мову для зміни:!",
+    "LangSwitch": "Мову було успішно змінено!",
+    "Contacts": "E-mail: zeiter1007@gmail.com\nManager telegram: @incred_huck\nHotline: 0546665544"
   }
 }

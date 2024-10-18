@@ -2,6 +2,7 @@ using Newtonsoft.Json;
 using Telegram.Bot;
 using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
+using Telegram.Bot.Types.ReplyMarkups;
 
 namespace tg_bot;
 
@@ -37,10 +38,45 @@ public class Host
         Console.WriteLine(update.Message?.Text);
         if (update.Message != null)
         {
-            if (update.Message.Text == "/start")
+            switch (update.Message?.Text)
             {
-                client.SendTextMessageAsync(update.Message.Chat.Id, _choosenLangPack["Greeting"], replyToMessageId: update.Message.MessageId);
+                case "/start":
+                {
+                    startKeyboard(update.Message.Chat.Id);
+                    break;
+                }
+                case "Language":
+                {
+                    languageKeyboard(update.Message.Chat.Id);
+                    break;
+                }
+                case "Ukrainian":
+                {
+                    _choosenLangPack = ukrainianPack;
+                    language = "Ukrainian";
+                    client.SendTextMessageAsync(update.Message.Chat.Id, _choosenLangPack["LangSwitch"], replyToMessageId: update.Message.MessageId);
+                    break;
+                }
+                case "English":
+                {
+                    _choosenLangPack = englishPack;
+                    language = "English";
+                    client.SendTextMessageAsync(update.Message.Chat.Id, _choosenLangPack["LangSwitch"], replyToMessageId: update.Message.MessageId);
+                    break;
+                }
+                case "Contacts":
+                {
+                    client.SendTextMessageAsync(update.Message.Chat.Id, _choosenLangPack["Contacts"], replyToMessageId: update.Message.MessageId);
+                    startKeyboard(update.Message.Chat.Id);
+                    break;
+                }
+                case "Back":
+                {
+                    startKeyboard(update.Message.Chat.Id);
+                    break;
+                }
             }
+            
             if (update.Message.Text == "/switch_language")
             {
                 if (language == "English")
@@ -63,5 +99,42 @@ public class Host
     {
         Console.WriteLine("Error:" + exception.Message);
         await Task.CompletedTask;
+    }
+
+    private async Task startKeyboard(long chatId)
+    {
+        var keyboard = new ReplyKeyboardMarkup(new[]
+        {
+            new KeyboardButton[] { "Order" },
+            new KeyboardButton[] { "Language" },
+            new KeyboardButton[] { "Contacts" }
+
+        })
+        {
+            ResizeKeyboard = true
+        };
+        await _client.SendTextMessageAsync(
+            chatId: chatId,
+            text:_choosenLangPack["Greeting"],
+            replyMarkup: keyboard
+        );
+    }
+
+    private async Task languageKeyboard(long chatId)
+    {
+        var keyboard = new ReplyKeyboardMarkup(new[]
+        {
+            new KeyboardButton[] { "English" },
+            new KeyboardButton[] { "Ukrainian" },
+            new KeyboardButton[] { "Back" }
+        })
+        {
+            ResizeKeyboard = true
+        };
+        await _client.SendTextMessageAsync(
+            chatId: chatId,
+            text:_choosenLangPack["langOptions"],
+            replyMarkup: keyboard
+        );
     }
 }
