@@ -12,6 +12,7 @@
       <change beforePath="$PROJECT_DIR$/tg_bot/Host.cs" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/Host.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tg_bot/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tg_bot/Resources/languages.json" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/Resources/languages.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tg_bot/bin/Debug/net8.0/tg_bot.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/bin/Debug/net8.0/tg_bot.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tg_bot/bin/Debug/net8.0/tg_bot.dll" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/bin/Debug/net8.0/tg_bot.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tg_bot/bin/Debug/net8.0/tg_bot.exe" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/bin/Debug/net8.0/tg_bot.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tg_bot/bin/Debug/net8.0/tg_bot.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/bin/Debug/net8.0/tg_bot.pdb" afterDir="false" />
@@ -20,14 +21,24 @@
       <change beforePath="$PROJECT_DIR$/tg_bot/obj/Debug/net8.0/refint/tg_bot.dll" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/obj/Debug/net8.0/refint/tg_bot.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tg_bot/obj/Debug/net8.0/tg_bot.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/obj/Debug/net8.0/tg_bot.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tg_bot/obj/Debug/net8.0/tg_bot.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/obj/Debug/net8.0/tg_bot.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tg_bot/obj/Debug/net8.0/tg_bot.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/obj/Debug/net8.0/tg_bot.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tg_bot/obj/Debug/net8.0/tg_bot.dll" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/obj/Debug/net8.0/tg_bot.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tg_bot/obj/Debug/net8.0/tg_bot.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/obj/Debug/net8.0/tg_bot.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tg_bot/obj/Debug/net8.0/tg_bot.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/obj/Debug/net8.0/tg_bot.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tg_bot/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tg_bot/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tg_bot/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tg_bot/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tg_bot/obj/tg_bot.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/obj/tg_bot.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tg_bot/tg_bot.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/tg_bot/tg_bot.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DpaMonitoringSettings">
+    <option name="autoShow" value="false" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -40,9 +51,8 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/387238ef9c8f8c6b1dccf4dcba4eed0e459454919b2e4b9cad11a5071789df/Dictionary.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7ed6f5e3b5f78ae215ce2f37f9ca779fea6e31feb6dfdf8b5683b9b27ba54/JsonConvert.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/stars/RiderProjects/tg_bot/tg_bot/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/stars/RiderProjects/tg_bot/tg_bot/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/tg_bot/obj/Debug/net8.0/.NETCoreApp,Version=v8.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/stars/RiderProjects/tg_bot/tg_bot/obj/Debug/net8.0/tg_bot.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -99,7 +109,8 @@
       <workItem from="1729020575401" duration="724000" />
       <workItem from="1729086223794" duration="6528000" />
       <workItem from="1729194117249" duration="4664000" />
-      <workItem from="1729252447805" duration="3835000" />
+      <workItem from="1729252447805" duration="4329000" />
+      <workItem from="1729440804717" duration="4967000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <option name="closed" value="true" />
@@ -125,7 +136,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729198660133</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added keyboards for lang, contacts">
+      <option name="closed" value="true" />
+      <created>1729256782007</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1729256782008</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,6 +168,7 @@
     <MESSAGE value="init commit" />
     <MESSAGE value="first funcions, lang packs" />
     <MESSAGE value="json languages" />
-    <option name="LAST_COMMIT_MESSAGE" value="json languages" />
+    <MESSAGE value="added keyboards for lang, contacts" />
+    <option name="LAST_COMMIT_MESSAGE" value="added keyboards for lang, contacts" />
   </component>
 </project>

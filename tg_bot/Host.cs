@@ -10,14 +10,20 @@ public class Host
 {
     private TelegramBotClient _client;
     
+    private static readonly string baseUrl = "http://api.openweathermap.org/data/2.5/weather";
+    
     private Dictionary<string, string> englishPack;
     private Dictionary<string, string> ukrainianPack;
-    private string language = "English";
+    private string _language = "English";
+    private string _location = "Kyiv";
+    private string _weatherAPI;
     
 
     private Dictionary<string, string> _choosenLangPack;
+    private bool _waiting = false;
+    private bool _recieving = true;
     
-    public Host(string token)
+    public Host(string token, string weatherAPI)
     {
         _client = new TelegramBotClient(token);
         string jsonContent = System.IO.File.ReadAllText(@"C:\Users\stars\RiderProjects\tg_bot\tg_bot\Resources\languages.json");
@@ -25,6 +31,7 @@ public class Host
         allLanguages.TryGetValue("english", out englishPack);
         allLanguages.TryGetValue("ukrainian", out ukrainianPack);
         _choosenLangPack = englishPack;
+        _weatherAPI = weatherAPI;
     }
 
     public void StartReceiving()
@@ -38,58 +45,92 @@ public class Host
         Console.WriteLine(update.Message?.Text);
         if (update.Message != null)
         {
-            switch (update.Message?.Text)
+            if(_recieving)
             {
-                case "/start":
+                switch (update.Message?.Text)
                 {
-                    startKeyboard(update.Message.Chat.Id);
-                    break;
+                    case "/start":
+                    {
+                        startKeyboard(update.Message.Chat.Id);
+                        break;
+                    }
+                    case "Language":
+                    {
+                        languageKeyboard(update.Message.Chat.Id);
+                        break;
+                    }
+                    case "Ukrainian":
+                    {
+                        _choosenLangPack = ukrainianPack;
+                        _language = "Ukrainian";
+                        client.SendTextMessageAsync(update.Message.Chat.Id, _choosenLangPack["LangSwitch"],
+                            replyToMessageId: update.Message.MessageId);
+                        break;
+                    }
+                    case "English":
+                    {
+                        _choosenLangPack = englishPack;
+                        _language = "English";
+                        client.SendTextMessageAsync(update.Message.Chat.Id, _choosenLangPack["LangSwitch"],
+                            replyToMessageId: update.Message.MessageId);
+                        break;
+                    }
+                    case "Contacts":
+                    {
+                        client.SendTextMessageAsync(update.Message.Chat.Id, _choosenLangPack["Contacts"],
+                            replyToMessageId: update.Message.MessageId);
+                        startKeyboard(update.Message.Chat.Id);
+                        Console.WriteLine();
+                        break;
+                    }
+                    case "Back":
+                    {
+                        startKeyboard(update.Message.Chat.Id);
+                        break;
+                    }
+                    case "Weather":
+                    {
+                        weatherKeyboard(update.Message.Chat.Id);
+                        break;
+                    }
+                    case "Change location":
+                    {
+                        client.SendTextMessageAsync(update.Message.Chat.Id, _choosenLangPack["locationChanging"],
+                            replyToMessageId: update.Message.MessageId);
+                        _recieving = false;
+                        _waiting = true;
+                        break;
+                    }
+                    case "My city":
+                    {
+                        var weatherData = await GetWeatherAsync(_location);
+                        client.SendTextMessageAsync(update.Message.Chat.Id, $"Weather in {_location}:\nTemp:{weatherData.Main.Temp}\nWeather:{weatherData.Weather[0].Description}",
+                            replyToMessageId: update.Message.MessageId);
+                        break;
+                    }
+                        
                 }
-                case "Language":
+                if (update.Message.Text == "/switch_language")
                 {
-                    languageKeyboard(update.Message.Chat.Id);
-                    break;
-                }
-                case "Ukrainian":
-                {
-                    _choosenLangPack = ukrainianPack;
-                    language = "Ukrainian";
+                    if (_language == "English")
+                    {
+                        _choosenLangPack = ukrainianPack;
+                        _language = "Ukrainian";
+                    } 
+                    else if (_language == "Ukrainian")
+                    {
+                        _choosenLangPack = englishPack;
+                        _language = "English";
+                    }
                     client.SendTextMessageAsync(update.Message.Chat.Id, _choosenLangPack["LangSwitch"], replyToMessageId: update.Message.MessageId);
-                    break;
-                }
-                case "English":
-                {
-                    _choosenLangPack = englishPack;
-                    language = "English";
-                    client.SendTextMessageAsync(update.Message.Chat.Id, _choosenLangPack["LangSwitch"], replyToMessageId: update.Message.MessageId);
-                    break;
-                }
-                case "Contacts":
-                {
-                    client.SendTextMessageAsync(update.Message.Chat.Id, _choosenLangPack["Contacts"], replyToMessageId: update.Message.MessageId);
-                    startKeyboard(update.Message.Chat.Id);
-                    break;
-                }
-                case "Back":
-                {
-                    startKeyboard(update.Message.Chat.Id);
-                    break;
                 }
             }
-            
-            if (update.Message.Text == "/switch_language")
+            else if (_waiting)
             {
-                if (language == "English")
-                {
-                    _choosenLangPack = ukrainianPack;
-                    language = "Ukrainian";
-                } 
-                else if (language == "Ukrainian")
-                {
-                    _choosenLangPack = englishPack;
-                    language = "English";
-                }
-                client.SendTextMessageAsync(update.Message.Chat.Id, _choosenLangPack["LangSwitch"], replyToMessageId: update.Message.MessageId);
+                _location = update.Message.Text;
+                _recieving = true;
+                _waiting = false;
+                client.SendTextMessageAsync(update.Message.Chat.Id, _choosenLangPack["locationChanged"], replyToMessageId: update.Message.MessageId);
             }
         }
         await Task.CompletedTask;
@@ -105,7 +146,7 @@ public class Host
     {
         var keyboard = new ReplyKeyboardMarkup(new[]
         {
-            new KeyboardButton[] { "Order" },
+            new KeyboardButton[] { "Weather" },
             new KeyboardButton[] { "Language" },
             new KeyboardButton[] { "Contacts" }
 
@@ -137,4 +178,57 @@ public class Host
             replyMarkup: keyboard
         );
     }
+    private async Task weatherKeyboard(long chatId)
+    {
+        var keyboard = new ReplyKeyboardMarkup(new[]
+        {
+            new KeyboardButton[] { "My city" },
+            new KeyboardButton[] { "Change location" },
+            new KeyboardButton[] { "Back" }
+        })
+        {
+            ResizeKeyboard = true
+        };
+        await _client.SendTextMessageAsync(
+            chatId: chatId,
+            text:_choosenLangPack["weatherMenu"],
+            replyMarkup: keyboard
+        );
+    }
+    
+    public async Task<WeatherResponse> GetWeatherAsync(string city)
+    {
+        using (HttpClient client = new HttpClient())
+        {
+            string requestUrl = $"{baseUrl}?q={city}&appid={_weatherAPI}&units=metric";
+            HttpResponseMessage response = await client.GetAsync(requestUrl);
+
+            if (response.IsSuccessStatusCode)
+            {
+                string json = await response.Content.ReadAsStringAsync();
+                return JsonConvert.DeserializeObject<WeatherResponse>(json);
+            }
+            else
+            {
+                Console.WriteLine($"API Error: {response.ReasonPhrase}");
+                return null;
+            }
+        }
+    }
+}
+
+public class WeatherResponse
+{
+    public MainInfo Main { get; set; }
+    public WeatherInfo[] Weather { get; set; }
+}
+
+public class MainInfo
+{
+    public double Temp { get; set; }
+}
+
+public class WeatherInfo
+{
+    public string Description { get; set; }
 }

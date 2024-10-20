@@ -4,13 +4,19 @@
     "Greeting": "Hello, User! This bot was created to take your orders and send them to restaurant!",
     "langOptions": "Choose language to switch:",
     "LangSwitch": "Language was successfully changed!",
-    "Contacts": "E-mail: zeiter1007@gmail.com\nManager telegram: @incred_huck\nHotline: 0546665544"
+    "Contacts": "E-mail: zeiter1007@gmail.com\nManager telegram: @incred_huck\nHotline: 0546665544",
+    "weatherMenu": "Choose an action:",
+    "locationChanging": "Enter your current location:",
+    "locationChanged": "Location has been updated"
   },
   "ukrainian": 
   {
     "Greeting": "Привіт, Користувачу!",
     "langOptions": "Оберіть мову для зміни:!",
     "LangSwitch": "Мову було успішно змінено!",
-    "Contacts": "E-mail: zeiter1007@gmail.com\nManager telegram: @incred_huck\nHotline: 0546665544"
+    "Contacts": "E-mail: zeiter1007@gmail.com\nManager telegram: @incred_huck\nHotline: 0546665544",
+    "weatherMenu": "Оберіть дію:",
+    "locationChanging": "Введіть ваше поточне місцезнаходження:",
+    "locationChanged": "Місцезнаходження було оновлено"
   }
 }
